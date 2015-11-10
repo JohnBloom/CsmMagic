@@ -1,0 +1,18 @@
+# ignore compiled objects
+obj/
+bin/
+
+# ignore user specific files
+*.suo
+*.user
+*.cache
+
+# ignore packages
+packages/
+
+# Local DB Files
+*.mdf
+*.ldf
+
+#Nuget Stuff
+deploy/.nuget/NuGet.exe

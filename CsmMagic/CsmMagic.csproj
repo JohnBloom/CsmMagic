@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D91D20F5-7649-497A-A562-30C79F2175F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsmMagic</RootNamespace>
+    <AssemblyName>CsmMagic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GenuineChannels">
+      <HintPath>..\lib\GenuineChannels.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\GenuineChannels.dll</HintPath>
+    </Reference>
+    <Reference Include="htn">
+      <HintPath>..\lib\htn.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\TrebuchetAPI\htn.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tern">
+      <HintPath>..\lib\tern.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\tern.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.API, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ebf0a5c08bc385d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Trebuchet.API.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.BusinessLogic">
+      <HintPath>..\lib\Trebuchet.BusinessLogic.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Communication">
+      <HintPath>..\lib\Trebuchet.Communication.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ebf0a5c08bc385d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Trebuchet.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Database">
+      <HintPath>..\lib\Trebuchet.Database.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Presentation">
+      <HintPath>..\lib\Trebuchet.Presentation.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Remoting">
+      <HintPath>..\lib\Trebuchet.Remoting.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Security">
+      <HintPath>..\lib\Trebuchet.Security.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.SharedDefs">
+      <HintPath>..\lib\Trebuchet.SharedDefs.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.SharedDefs.dll</HintPath>
+    </Reference>
+    <Reference Include="Trebuchet.Utility">
+      <HintPath>..\lib\Trebuchet.Utility.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Cherwell Service Management\Trebuchet.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\FieldAttribute.cs" />
+    <Compile Include="Attributes\HandledBusinessObjectAttribute.cs" />
+    <Compile Include="Attributes\KeyAttribute.cs" />
+    <Compile Include="Attributes\RelationshipAttribute.cs" />
+    <Compile Include="Exceptions\OneStepExecutionException.cs" />
+    <Compile Include="Exceptions\OneStepNotFoundException.cs" />
+    <Compile Include="Exceptions\RecordNotFoundException.cs" />
+    <Compile Include="Handlers\BaseBusinessObjectHandler.cs" />
+    <Compile Include="Config\CherwellConnectionConfigElement.cs" />
+    <Compile Include="Config\CsmMagicConfiguration.cs" />
+    <Compile Include="CsmClient.cs" />
+    <Compile Include="CsmClientConfiguration.cs" />
+    <Compile Include="CsmClientFactory.cs" />
+    <Compile Include="Handlers\DefaultBusinessObjectHandler.cs" />
+    <Compile Include="Exceptions\CherwellDataException.cs" />
+    <Compile Include="Exceptions\CherwellReadException.cs" />
+    <Compile Include="FieldHelper.cs" />
+    <Compile Include="Handlers\HandlerClient.cs" />
+    <Compile Include="Handlers\IHandlerClient.cs" />
+    <Compile Include="Models\ArbitraryCsmBusinessObject.cs" />
+    <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\CsmQueryOperator.cs" />
+    <Compile Include="Exceptions\CherwellUpdateException.cs" />
+    <Compile Include="ICsmClient.cs" />
+    <Compile Include="ICsmClientFactory.cs" />
+    <Compile Include="Models\BusinessObjectModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\CsmQuery.cs" />
+    <Compile Include="Queries\CsmArbitraryQuery.cs" />
+    <Compile Include="Queries\CsmQueryClause.cs" />
+    <Compile Include="Queries\CsmSubQuery.cs" />
+    <Compile Include="Queries\CsmVisitor.cs" />
+    <Compile Include="Queries\ICsmArbitraryQuery.cs" />
+    <Compile Include="Queries\ICsmQuery.cs" />
+    <Compile Include="Queries\ICsmQueryClause.cs" />
+    <Compile Include="BusinessObjectExtensions.cs" />
+    <Compile Include="Queries\ParsedExpression.cs" />
+    <Compile Include="Transactions\CsmMagicCreateTransaction.cs" />
+    <Compile Include="Transactions\CsmMagicUpdateTransaction.cs" />
+    <Compile Include="Transactions\CsmMagicWriteTransaction.cs" />
+    <Compile Include="TrebuchetQueryExtensions.cs" />
+    <Compile Include="Validation\CsmValidationAttribute.cs" />
+    <Compile Include="Validation\CsmValidationException.cs" />
+    <Compile Include="Validation\CsmValidator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

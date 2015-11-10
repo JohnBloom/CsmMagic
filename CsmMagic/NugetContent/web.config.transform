@@ -1,0 +1,8 @@
+<configuration>
+	<configSections>
+		<section name="CsmMagic" type="CsmMagic.Config.CsmMagicConfiguration, CsmMagic" />
+	</configSections>
+    <CsmMagic>
+    	<CherwellConnection userName="CSDService" password="CSDService" connectionName="[Common]csm.api" />
+    </CsmMagic>
+</configuration>
