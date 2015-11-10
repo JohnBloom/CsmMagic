@@ -2,6 +2,10 @@
 
 An ORM for Cherwell Service Management.
 
+## Get the Package
+
+You can get CsmMagic by [grabbing the latest NuGet package](https://www.nuget.org/packages/CsmMagic/).
+
 ## Motivation
 
 The Trebuchet API exposes the complete functionality of the Cherwell system, which can be overwhelming and confusing. Furthermore, the optimal methods for achieving desired functionality are not obvious. This library is intended to expose a digestible, easy-to-use API that facilitates a specific set of operations - reading and writing data - for client-defined types, for which the underlying Trebuchet sequences have been refined and optimized to maximize performance and correctness.
